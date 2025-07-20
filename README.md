@@ -10,15 +10,25 @@ Este projeto treina um modelo de CNN usando Transfer Learning sobre a arquitetur
 2. ⚙️ Requisitos
 
 Python 3.8+
-Google Colab ou ambiente com GPU
-Bibliotecas necessárias:
-TensorFlow ≥ 2.x
-numpy, matplotlib, seaborn
-scikit-learn
-pandas (opcional)
 
-Instalação rápida:
+Google Colab ou ambiente local com suporte a GPU
+
+Bibliotecas necessárias:
+
+TensorFlow ≥ 2.x
+
+numpy
+
+matplotlib
+
+seaborn
+
+scikit-learn
+
+pandas (opcional, apenas para análise adicional)
+
 pip install tensorflow numpy matplotlib seaborn scikit-learn pandas
+
 
 3. 🚀 Uso passo a passo
 
@@ -42,25 +52,27 @@ o val_loss aumentou levemente, sinal de que pode estar memorizando.
 Porém é normal quando se usa fine‑tuning com muitos dados.
 
 ## 📈 Evolução do Treinamento
-
-Abaixo temos o gráfico de **loss** e **acurácia** ao longo das épocas:
+A seguir, temos o gráfico que mostra a evolução da acurácia e do erro (loss) ao longo das épocas:
 
 ![Loss e Acurácia](Loss_e_Acurácia.PNG)
 
+O gráfico indica que o modelo inicialmente teve ganhos rápidos de desempenho, com um leve indício de overfitting nas últimas épocas, quando a acurácia no treino continuou subindo e a do val começou a oscilar.
 
 ## 📊 Matriz de Confusão
-
-Visualização da matriz de confusão após avaliação no conjunto de teste:
+A matriz de confusão abaixo representa o desempenho do modelo no conjunto de teste, mostrando a quantidade de previsões corretas e incorretas para cada classe (Gato e Cachorro):
 
 ![Matriz de Confusão](Matriz_de_Confusão.PNG)
 
+A diagonal principal (de cima à esquerda e para baixo à direita) representa os acertos. Valores altos nessa diagonal indicam que o modelo classificou corretamente a maioria das imagens.
 
 # 🧠 Curva ROC (Receiver Operating Characteristic)
 
-A curva ROC mostra a capacidade do modelo em distinguir entre as classes:
+A Curva ROC mostra a capacidade do modelo em distinguir entre gatos e cachorros.
+Quanto mais próximo da curva esta do canto superior esquerdo, melhor o desempenho.
 
 ![Curva ROC](Curva_ROC.PNG)
 
+A área sob a curva (AUC) é uma métrica importante de separabilidade. Um AUC próximo de 1.0 indica que o modelo tem uma excelente capacidade de discriminar entre as classes.
 
 5. 🧠 Interpretação das métricas
 Acurácia: percentual de imagens classificadas corretamente.
