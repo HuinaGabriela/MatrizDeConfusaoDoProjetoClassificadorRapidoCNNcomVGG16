@@ -45,21 +45,21 @@ Porém é normal quando se usa fine‑tuning com muitos dados.
 
 Abaixo temos o gráfico de **loss** e **acurácia** ao longo das épocas:
 
-![Loss e Acurácia](imgs/loss_accuracy.png)
+![Loss e Acurácia](Loss e Acurácia.PNG)
 
 
 ## 📊 Matriz de Confusão
 
 Visualização da matriz de confusão após avaliação no conjunto de teste:
 
-![Matriz de Confusão](imgs/confusion_matrix.png)
+![Matriz de Confusão](Matriz de Confusão.PNG)
 
 
 # 🧠 Curva ROC (Receiver Operating Characteristic)
 
 A curva ROC mostra a capacidade do modelo em distinguir entre as classes:
 
-![Curva ROC](imgs/roc_curve.png)
+![Curva ROC](imgs/Curva ROC.PNG)
 
 
 5. 🧠 Interpretação das métricas
