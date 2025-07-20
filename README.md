@@ -72,25 +72,27 @@ F1‑score: média harmônica entre precisão e sensibilidade.
 📊 O que é a Matriz de Confusão?
 A matriz de confusão é uma ferramenta usada para entender como o modelo está acertando e errando suas previsões. No caso de duas classes (gatos e cachorros), ela tem este formato:
 
-                               Previsto: Gato	                Previsto: Cachorro
+ |                        | **Previsto: Gato**      | **Previsto: Cachorro** |
+|------------------------|--------------------------|--------------------------|
+| **Verdadeiro: Gato**   | VP (Verdadeiro Positivo) | FN (Falso Negativo)     |
+| **Verdadeiro: Cachorro** | FP (Falso Positivo)     | VN (Verdadeiro Negativo)|
 
-Verdadeiro: Gato	             VP (Verdadeiro Positivo)	      FN (Falso Negativo)
-Verdadeiro: Cachorro	         FP (Falso Positivo)	          VN (Verdadeiro Negativo)
 
-
-VP (True Positive): modelo disse "gato" e era "gato".
-VN (True Negative): modelo disse "cachorro" e era "cachorro".
-FP (False Positive): modelo disse "gato", mas era "cachorro".
-FN (False Negative): modelo disse "cachorro", mas era "gato".
+- **VP (True Positive)**: modelo disse "gato" e era "gato".
+- **VN (True Negative)**: modelo disse "cachorro" e era "cachorro".
+- **FP (False Positive)**: modelo disse "gato", mas era "cachorro".
+- **FN (False Negative)**: modelo disse "cachorro", mas era "gato".
 
 A partir desses valores, calculamos:
 
-Métrica	Fórmula	Interpretação
-Acurácia	(VP + VN) / Total	Proporção de acertos gerais
-Precisão	VP / (VP + FP)	Quando o modelo disse “gato”, com que frequência ele estava certo?
-Recall (Sensibilidade)	VP / (VP + FN)	Das imagens que eram “gato”, quantas o modelo identificou corretamente?
-Especificidade	VN / (VN + FP)	Das imagens que eram “cachorro”, quantas o modelo acertou
-F1‑Score	2 × (Precisão × Recall) / (Precisão + Recall)	Combinação entre precisão e recall (muito útil se os dados são desbalanceados)
+| **Métrica**     | **Fórmula**                                  | **Interpretação**                                                                 |
+|------------------|----------------------------------------------|------------------------------------------------------------------------------------|
+| Acurácia         | (VP + VN) / Total                            | Proporção total de acertos do modelo                                              |
+| Precisão         | VP / (VP + FP)                               | Das vezes que o modelo disse “gato”, quantas vezes ele estava certo?             |
+| Recall (Sens.)   | VP / (VP + FN)                               | Das imagens que realmente eram “gato”, quantas o modelo identificou corretamente? |
+| Especificidade   | VN / (VN + FP)                               | Das imagens que eram “cachorro”, quantas o modelo classificou corretamente?       |
+| F1‑Score         | 2 × (Precisão × Recall) / (Precisão + Recall) | Combinação entre precisão e recall — útil com classes desbalanceadas              |
+
 
 
 
