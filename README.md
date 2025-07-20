@@ -45,14 +45,14 @@ Porém é normal quando se usa fine‑tuning com muitos dados.
 
 Abaixo temos o gráfico de **loss** e **acurácia** ao longo das épocas:
 
-![Loss e Acurácia](Loss e Acurácia.PNG)
+![Loss e Acurácia](Loss_e_Acurácia.PNG)
 
 
 ## 📊 Matriz de Confusão
 
 Visualização da matriz de confusão após avaliação no conjunto de teste:
 
-![Matriz de Confusão](Matriz de Confusão.PNG)
+![Matriz de Confusão](Matriz_de_Confusão.PNG)
 
 
 # 🧠 Curva ROC (Receiver Operating Characteristic)
