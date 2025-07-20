@@ -59,7 +59,7 @@ Visualização da matriz de confusão após avaliação no conjunto de teste:
 
 A curva ROC mostra a capacidade do modelo em distinguir entre as classes:
 
-![Curva ROC](imgs/Curva ROC.PNG)
+![Curva ROC](Curva_ROC.PNG)
 
 
 5. 🧠 Interpretação das métricas
